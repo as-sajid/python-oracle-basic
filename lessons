@@ -1,0 +1,8 @@
+Lessons learnt
+For connecting to python install the basic instant client.
+Install the libaio. For this you may have to add the stable repo for current
+Install the LD_LIBRARY_PATH
+For this create a file in /etc/ld.so.conf.d.
+I added ora.conf amd added the path of instant client
+Install the cx_Oracle file
+create a config.py file to have the details of oracle connection
