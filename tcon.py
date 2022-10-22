@@ -4,7 +4,7 @@
       2.install the oracle instant client basic and add its path to your PATH  variable '''
 import cx_Oracle
 import sys
-import config
+import config10
 lib_dir = r"C:\instantclient_19_13"
 
 try:
@@ -16,10 +16,10 @@ except Exception as err:
 
 try:
     with cx_Oracle.connect(
-            config.username,
-            config.password,
-            config.dsn,
-            encoding=config.encoding) as con:
+            config10.username,
+            config10.password,
+            config10.dsn,
+            encoding=config10.encoding) as con:
                   print(con.version)
                   cur = con.cursor()
                   cur.execute('Select * from hr.employees')
@@ -27,7 +27,7 @@ try:
                   print (result )
                   ''' 
                   for result in cur:
-                          print ( result )
+                          print ( result +"\n" )
                   '''
                   cur.close()
                   con.close()
